@@ -2,12 +2,16 @@ package com.visma.model;
 
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvDate;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class Transaction {
 
@@ -22,7 +26,7 @@ public class Transaction {
 
     @CsvDate(value = "yyyy-MM-dd")
     @CsvBindByName(column = "transaction_date")
-    private Date transactionDate;
+    private LocalDate transactionDate;
 
     @CsvBindByName(column = "item_price")
     private Double price;

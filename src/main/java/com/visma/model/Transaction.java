@@ -2,11 +2,13 @@ package com.visma.model;
 
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvDate;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
+@Builder
 public class Transaction {
 
     @CsvBindByName(column = "transaction_id")
